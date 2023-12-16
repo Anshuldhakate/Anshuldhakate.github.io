@@ -6,39 +6,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Anshul Dhakate Portpholio</title>
+    
 </head>
+<style>
+  body{
+    width: auto;
+    margin: auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* background-color: black; */
+  }
+  #nav-menu{
+    background-color: lightskyblue;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    font-size: 120%;
+    padding: 1%;
+    position: fixed;
+  }
+
+  #nav-menu a{
+    text-decoration: none;
+    margin-left: 18px;
+    color: black;
+    text-decoration: solid;
+    padding: 0.5%;
+  }
+
+  #nav-menu a:hover{
+    background-color: blueviolet;
+    color: black;
+  }
+
+  .nav-link-name{
+   margin-right: 30%;
+  }
+
+  #home{
+    display: flex;
+    width: 100%;
+    margin: auto;
+  }
+  #home img{
+    width: 30%;
+    padding: 3%;
+    border-radius: 30%;
+  }
+  #home h1{
+    width: 50%;
+    margin: auto;
+    padding: 3%;
+    border-radius: 10%;
+    background-color: rgb(169, 216, 245);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    font-size: 220%;
+  }
+  #user-detail-name{
+    text-align: center;
+    padding: 1%;
+    font-size: 200%;
+    font-weight: bold;
+  }
+
+  #user-detail-intro{
+    width: 70%;
+    margin: auto;
+    text-align: justify;
+    padding: 1%;
+    font-size: 150%;
+  
+  }
+
+  #skills{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    text-align: center;
+    padding: 2%;
+  }
+
+  #skills img{
+    width: 60%;
+    margin: auto;
+    padding: 1%;
+    margin-top: 30%;
+  }
+  #skills div{
+    width: 70%;
+    margin: auto;
+    padding: 1%;
+  }
+  .skills-card{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  .skills-card:hover{
+    background-color: rgb(169, 216, 245);
+  }
+  #skill{
+    text-align: center;
+    margin-top: 10%;
+  }
+
+</style>
 <body>
     <nav id="nav-menu">
-        <a class="nav-link home" href="#home">Home</a>
+      <a class="nav-link-name" href="#home">Anshul</a>
+        <a class="nav-link-home" href="#home">Home</a>
         <a class="nav-link about" href="#about">About</a>
-        <a class="nav-link skills" href="#skills">Skills</a>
+        <a class="nav-link skills" href="#skill">Skills</a>
         <a class="nav-link projects" href="#projects">Projects</a>
         <a class="nav-link contact" href="#contact">Contact</a>
         <a class="nav-link resume" href="#" id="resume-link-1" target="_blank">Resume</a>
-        <a class="nav-link resume" href="#" id="resume-link-2" target="_blank">Resume</a>
+     
       </nav>
     
       <!-- Home Section -->
       <section id="home">
-        <img src="path/to/your/photo.jpg" alt="Your Professional Photo" class="home-img">
+        <img src="masa8 (1).jpg" alt="Your Professional Photo" class="home-img"> 
+          <h1>Hi There!, <br> I am Anshul Dhakate <br> Full Stack Web Developer</h1>
+        
+        
       </section>
     
       <!-- About Section -->
-      <section id="about" class="about section">
-        <div id="user-detail-name">Your Name</div>
-        <div id="user-detail-intro">Formal introduction here.</div>
-        <button id="resume-button-2">Resume</button>
-      </section>
+      <div id="about" class="about section">
+        <div id="user-detail-name">LET ME INTRODUCE MYSELF</div>
+        <div id="user-detail-intro">Hi, I'm Anshul Dhakate an dedicated Full Stack Web Developer with strong proficiency in JavaScript and expertise in HTML, CSS. Proficient in React and MERN Stack. Collaborative problem-solver with a keen eye for design. Proven track record of delivering successful web applications. <br>
+          <br>
+          I developed passion for coding a few years back when I printed my first "Hello world" 😃, that hello world just hits different. Since then aesthetically functional websites has just been my thing.
+        </div>
+      </div>
     
       <!-- Skills Section -->
-      <section id="skills">
+      <h1 id="skill">Skills</h1>
+      <div id="skills">
+       
         <div class="skills-card">
-          <img src="path/to/skill-image.jpg" alt="Skill Image" class="skills-card-img">
-          <div class="skills-card-name">Skill Name</div>
+          <img src="https://mohitkss.github.io/static/media/html5.4e6edfe05f07c383e94f.png" alt="Skill Image" class="skills-card-img">
+          <div class="skills-card-name">HTML</div>
         </div>
+
+        <div class="skills-card">
+          <img src="https://mohitkss.github.io/static/media/css3.845e8eb63836bef093cf.png" alt="Skill Image" class="skills-card-img">
+          <div class="skills-card-name">CSS</div>
+        </div>
+
+        <div class="skills-card">
+          <img src="https://mohitkss.github.io/static/media/js.3dfb665e058d08c99f28.png" alt="Skill Image" class="skills-card-img">
+          <div class="skills-card-name">Javascript</div>
+        </div>
+
+        <div class="skills-card">
+          <img src="https://mohitkss.github.io/static/media/git.b1472a80b81e487179cf.png" alt="Skill Image" class="skills-card-img">
+          <div class="skills-card-name">Git/Github</div>
+        </div>
+
+        <div class="skills-card">
+          <img src="https://mohitkss.github.io/static/media/mongodb.4f7af09e6354d51beec8.png" alt="Skill Image" class="skills-card-img">
+          <div class="skills-card-name">MongoDB</div>
+        </div>
+
+        <div class="skills-card">
+          <img src="https://mohitkss.github.io/static/media/nodejs.b508473ad71a31ce2fae.png" alt="Skill Image" class="skills-card-img">
+          <div class="skills-card-name">NodeJS</div>
+        </div>
+        
+        <div class="skills-card">
+          <img src="https://mohitkss.github.io/static/media/react.22d1f2096ed82cab7a8a.png" alt="Skill Image" class="skills-card-img">
+          <div class="skills-card-name">React</div>
+        </div>
+
+        <div class="skills-card">
+          <img src="https://mohitkss.github.io/static/media/redux.7fec6369cecd1cbd44d6.png" alt="Skill Image" class="skills-card-img">
+          <div class="skills-card-name">Redux</div>
+        </div>
+
+        <div class="skills-card">
+          <img src="https://mohitkss.github.io/static/media/mern.b58d81727b47466a7cda.png" alt="Skill Image" class="skills-card-img">
+          <div class="skills-card-name">MERN</div>
+        </div>
+        
+
+
         <!-- Add more skills cards as needed -->
-      </section>
+      </div>
     
       <!-- Projects Section -->
       <section id="projects">
