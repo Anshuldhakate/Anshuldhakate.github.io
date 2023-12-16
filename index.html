@@ -92,7 +92,7 @@
   }
 
   #skills img{
-    width: 60%;
+    width: 40%;
     margin: auto;
     padding: 1%;
     margin-top: 30%;
@@ -111,6 +111,46 @@
   #skill{
     text-align: center;
     margin-top: 10%;
+  }
+
+  .project-card{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 1%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 5%;
+  }
+  .project-card img{
+    width: 50%;
+    margin: auto;
+    height: 300px;
+  }
+  .project-card div{
+  padding: 2%;
+  }
+
+  .project-title{
+    font-size: 200%;
+  }
+
+  .project-description{
+    font-size: 120%;
+  }
+  .project-github-link{
+    text-decoration: none;
+    margin-left: 2%;
+    background-color: lightskyblue;
+    padding: 1%;
+    border-radius: 20%;
+  }
+  .project-deployed-link{
+    text-decoration: none;
+    margin-left: 2%;
+    background-color: lightskyblue;
+    padding: 1%;
+    border-radius: 20%;
   }
 
 </style>
@@ -198,16 +238,59 @@
       </div>
     
       <!-- Projects Section -->
+      <h1 id="skill">Projects</h1>
       <section id="projects">
         <div class="project-card">
-          <img src="path/to/project-image.jpg" alt="Project Image">
-          <div class="project-title">Project Title</div>
-          <div class="project-description">Project Description</div>
-          <div class="project-tech-stack">Tech Stack Used</div>
-          <a href="project-github-link" class="project-github-link">GitHub Repository</a>
-          <a href="project-deployed-link" class="project-deployed-link">Deployed Link or Video Link</a>
+          <img src="ukrClub.png" alt="Project Image"/>
+          <div>
+          <div class="project-title">UKR Club- Cottage Booking Website</div>
+          <div class="project-description">User-friendly interface: Designed an intuitive interface for easy browsing and selection of travel packages. <br>
+            Package browsing: Enabled users to view and explore various travel packages.  <br>   
+            Booking and payments pages: Created seamless, secure pages for booking and completing transactions. <br>    
+            Exception handling and validation: Implemented robust mechanisms for a smooth user experience and data integrity.    
+            Version control (GitHub): Maintained the project repository on GitHub for collaborative development and version tracking.</div>
+          <div class="project-tech-stack"> Tech Stacks - HTML, CSS, JS</div>
+          <a href="https://github.com/Anshuldhakate/grubby-mitten-8672" class="project-github-link">GitHub Repository</a>  
+          <a href="https://649045f9bb4a665bda46adf9--mellifluous-peony-6123ae.netlify.app/index.html" class="project-deployed-link">Deployed Link</a>
+        </div>
         </div>
         <!-- Add more project cards as needed -->
+
+
+        <div class="project-card">
+          
+          <div>
+          <div class="project-title">Forever Care</div>
+          <div class="project-description">Forever Care is a doctor consultation booking website. Experiencing the website we can book doctors in the different cities within the variety of different departments. In this way, the website can be easily navigated according to our needs. This project uses the React library, with the Javascript and CSS which includes external CSS like CharkaUI and MaterialUI. This website is fully responsive so we can have a hassle-free experience on any device.</div>
+          <div class="project-tech-stack"> Tech Stacks - HTML, CSS, JS, React, ChakraUI</div>
+          <a href="https://github.com/Srinivas831/ForeverCare" class="project-github-link">GitHub Repository</a>  
+          <a href="https://forevercare.vercel.app/" class="project-deployed-link">Deployed Link</a>
+        </div>
+        <img src="foreverCare.png" alt="Project Image"/>
+        </div>
+
+        <div class="project-card">
+          <img src="AdventureTravels.png" alt="Project Image"/>
+          <div>
+          <div class="project-title">Adventure-Travels</div>
+          <div class="project-description">UThe Adventure Travels is the website name of our project and it is a website where the users can book tourism travels plans and enjoy the traveling features provided by us.</div>
+          <div class="project-tech-stack"> Tech Stacks - HTML, CSS, JS</div>
+          <a href="https://github.com/RaviTheja1996/Adventure-Travels" class="project-github-link">GitHub Repository</a>  
+          <a href="https://capable-custard-882ec2.netlify.app/" class="project-deployed-link">Deployed Link</a>
+        </div>
+        </div>
+
+        <div class="project-card">
+          
+          <div>
+          <div class="project-title">Glossier</div>
+          <div class="project-description">Glossier is your go-to destination for beauty essentials! Discover a curated selection of skincare, makeup, and self-care products that highlight your natural radiance. Navigate effortlessly to find what you need, whether it's skincare tailored to your needs or makeup to express your unique style. This project uses React, JavaScript, and CSS, our site embraces CharkaUI and MaterialUI for a seamless experience.</div>
+          <div class="project-tech-stack"> Tech Stacks - HTML, CSS, JS, React, ChakraUI</div>
+          <a href="https://github.com/Anshuldhakate/gamy-lace-3375" class="project-github-link">GitHub Repository</a>  
+          <a href="https://my-app-zeta-steel.vercel.app/" class="project-deployed-link">Deployed Link</a>
+        </div>
+        <img src="glossier.png" alt="Project Image"/>
+        </div>
       </section>
     
       <!-- Contact Section -->
