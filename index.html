@@ -12,13 +12,16 @@
 <style>
   
   body{
-    width: auto;
+    width: 100%;
     margin: auto;
     font-family: Nunito,sans-serif;
     /* background-color: rgb(200, 231, 241); */
+    
+
+    
   }
   #nav-menu{
-    background-color: lightskyblue;
+    background-color: #80b541;
     align-items: center;
     width: 100%;
     margin: auto;
@@ -28,6 +31,7 @@
     font-size: 110%;
     padding: 1%;
     position: fixed;
+    transition: transform 0.9s ease;
   }
 
   #nav-menu a{
@@ -39,7 +43,7 @@
   }
 
   #nav-menu a:hover{
-    background-color: rgb(4, 53, 84);
+    background-color: #3f7502;
     color: white;
   }
 
@@ -47,11 +51,25 @@
    margin-right: 30%;
   }
 
+  .hamburger-menu {
+  display: none; /* Hide by default */
+  cursor: pointer;
+}
+
+.line {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+}
+
   #home{
     display: flex;
     width: 100%;
     margin: auto;
-
+    /* background-image: url('./istockphoto-1426727021-170667a.webp');  */
+  background-size: cover; 
+  background-repeat: no-repeat;
   }
   #home img{
     width: 30%;
@@ -64,15 +82,18 @@
     margin: auto;
     padding: 3%;
     border-radius: 10%;
-    background-color: rgb(169, 216, 245);
+    /* background-color: #95a97d; */
+    color: #396602;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     font-size: 220%;
     transition: transform 0.3s ease-in-out;
+    opacity: 0.8;
   }
 
   #home h1:hover{
-    background-color: lightskyblue;
+    /* background-color: #80b541; */
     transform: scale(1.1);
+    opacity: 0.8;
   }
 
   #user-detail-name{
@@ -80,6 +101,7 @@
     padding: 1%;
     font-size: 200%;
     font-weight: bold;
+    color: #396602;
   }
 
   #user-detail-intro{
@@ -96,6 +118,7 @@
     grid-template-columns: repeat(5, 1fr);
     text-align: center;
     padding: 2%;
+    
   }
 
   #skills img{
@@ -120,6 +143,7 @@
   #skill{
     text-align: center;
     margin-top: 10%;
+    color: #396602;
   }
 
   .project-card{
@@ -142,6 +166,7 @@
 
   .project-title{
     font-size: 200%;
+    color: #396602;
   }
 
   .project-description{
@@ -150,16 +175,26 @@
   .project-github-link{
     text-decoration: none;
     margin-left: 2%;
-    background-color: lightskyblue;
-    padding: 1%;
-    border-radius: 20%;
+    background-color: #80b541;
+    padding: 2.5%;
+    /* border-radius: 100%; */
+    color: black;
+  }
+  .project-github-link:hover{
+    background-color: #3f7502;
+    color: beige;
   }
   .project-deployed-link{
     text-decoration: none;
     margin-left: 2%;
-    background-color: lightskyblue;
-    padding: 1%;
-    border-radius: 20%;
+    background-color: #80b541;
+    padding: 2%;
+    /* border-radius: 100%; */
+    color: black;
+  }
+  .project-deployed-link:hover{
+    background-color: #3f7502;
+    color: beige;
   }
   
   #projects img {
@@ -170,15 +205,91 @@
   transform: scale(1.3);
   transform-origin: center center;
 }
+.project-tech-stack{
+  margin-bottom: 5%;
+}
+
+#github-streak-stats{
+  text-align: center;
+  margin-bottom: 5%;
+}
 
   #contact{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    height: 200px;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100px;
     align-items: center;
-    background-color: lightskyblue;
     text-align: center;
   }
+  #contact-github{
+    background-color: #80b541;
+    color: black;
+    height: 30px;
+    align-content: center;
+    padding: 2%;
+    text-decoration: none;
+  }
+  #contact-linkedin{
+    background-color: #80b541;
+    color: black;
+    height: 30px;
+    align-content: center;
+    padding: 2%;
+    text-decoration: none;
+  }
+  #contact-phone{
+    background-color: black;
+    color: white;
+    height: 60px;
+    align-content: center;
+    padding: 3%;
+  }
+  #contact-email{
+    background-color: black;
+    color: white;
+    height: 60px;
+    align-content: center;
+    padding: 3%;
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    #home{
+    display: flex;
+    }
+}
+  
+@media only screen and (max-width: 768px) {
+  .nav-link {
+    display: none; 
+  }
+
+  #nav-menu.show-links .nav-link {
+    display: block; 
+  }
+
+  .hamburger-menu {
+    display: block; 
+  }
+
+  #home{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    }
+
+    #skills{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    padding: 2%;
+    
+  }
+
+  .project-card{
+    display: flex;
+    flex-direction: column;
+  }
+}
 
 </style>
 <body>
@@ -191,7 +302,14 @@
         <a class="nav-link contact" href="#contact">Contact</a>
         <a class="nav-link resume" href="https://test-resume.masaischool.com/resume?resumeId=6529170c41838a52ba65d18a&selectedTemplate=TwoColumnMinimal" id="resume-link-1" target="_blank">Resume</a>
      
+
+        <div class="hamburger-menu">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
       </nav>
+      
     
       <!-- Home Section -->
       <section id="home">
@@ -326,7 +444,8 @@
       </section>
 
       <!-- GitHub Statistics -->
-      <div id="github-streak-stats" class="react-activity-calendar">
+      <h1 id="skill">GitHub Statistics</h1>
+      <div id="github-streak-stats" class="react-activity-calendar">    
         <a href="https://git.io/streak-stats"><img src="https://github-readme-streak-stats.herokuapp.com?user=Anshuldhakate" alt="GitHub Streak" /></a>
       </div>
       <div id="github-top-langs"></div>
@@ -336,10 +455,22 @@
       <section id="contact">
         <a href="https://github.com/Anshuldhakate" id="contact-github">GitHub Profile</a>
         <a href="https://www.linkedin.com/in/anshul-dhakate-10b005145/" id="contact-linkedin">LinkedIn Profile</a>
-        <div id="contact-phone">Phone Number</div>
-        <div id="contact-email">Email Address</div>
+        <div id="contact-phone">Phone Number <br>📞9156632395</div>
+        <div id="contact-email">Email Address <br>📧anshuldhakate11@gmail.com</div>
       </section>
     
       
 </body>
+
+<script>
+
+const hamburger = document.querySelector('.hamburger-menu');
+const navLinks = document.querySelectorAll('.nav-link');
+
+hamburger.addEventListener('click', () => {
+  // Toggle a class on the nav menu to show/hide links
+  document.getElementById('nav-menu').classList.toggle('show-links');
+});
+
+</script>
 </html>
