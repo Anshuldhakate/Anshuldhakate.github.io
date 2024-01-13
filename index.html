@@ -8,22 +8,23 @@
 </head>
 <style>
   
-  body{
-    width: 100%;
-    margin: auto;
-    font-family: Nunito,sans-serif;
-    /* background-color: rgb(200, 231, 241); */
-    
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: lightgray;
+    background-image: url(https://mohitkss.github.io/static/media/backgroundHome.1401f9c3ab9e0acab13c.jpg);
+}
 
-    
-  }
   #nav-menu{
-    background-color: #80b541;
+    /* background-color: #80b541; */
+    background-color: black;
     align-items: center;
     width: 100%;
     margin: auto;
     padding: 10px;
-    color: black;
+    color: white;
     text-decoration: none;
     font-size: 110%;
     padding: 1%;
@@ -34,7 +35,7 @@
   #nav-menu a{
     text-decoration: none;
     margin-left: 18px;
-    color: black;
+    color: white;
     text-decoration: solid;
     padding: 0.5%;
   }
@@ -80,11 +81,11 @@
     padding: 3%;
     border-radius: 10%;
     /* background-color: #95a97d; */
-    color: #396602;
+    color: black;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     font-size: 220%;
     transition: transform 0.3s ease-in-out;
-    opacity: 0.8;
+    /* opacity: 0.8; */
   }
 
   #home h1:hover{
@@ -95,15 +96,17 @@
 
   #resume-button-1{
     text-decoration: none;
-    font-size: 50%;
-    background-color: #80b541;
-    color: black;
-    padding: 1%;
+    font-size: 60%;
+    background-color: black;
+    color: white;
+    padding: 1.5%;
+    margin-top: 50px;
     
   }
   #resume-button-1:hover{
-    background-color: #396602;
+    background-color: rgb(54, 52, 52);
     color: white;
+
   }
 
   #user-detail-name{
@@ -111,7 +114,7 @@
     padding: 1%;
     font-size: 200%;
     font-weight: bold;
-    color: #396602;
+    color: black;
   }
 
   #user-detail-intro{
@@ -153,7 +156,7 @@
   #skill{
     text-align: center;
     margin-top: 10%;
-    color: #396602;
+    color: black;
   }
 
   .project-card{
@@ -219,9 +222,29 @@
   margin-bottom: 5%;
 }
 
-#github-streak-stats{
-  text-align: center;
-  margin-bottom: 5%;
+#github-streak-stats {
+    max-width: 50%; 
+    margin: auto;
+}
+
+
+#github-streak-stats img {
+    display: block; 
+    width: 100%; 
+    height: auto;
+    max-width: 100%; 
+}
+
+#github-top-langs{
+  max-width: 50%; 
+    margin: auto;
+}
+
+#github-top-langs img {
+    display: block; 
+    width: 100%; 
+    height: auto;
+    max-width: 100%; 
 }
 
   #contact{
@@ -232,30 +255,43 @@
     text-align: center;
   }
   #contact-github{
-    background-color: #80b541;
-    color: black;
-    height: 30px;
+    background-color: rgb(94, 91, 91);
+    color: white;
+    height: 100px;
     align-content: center;
-    padding: 2%;
+    /* padding: 2%; */
     text-decoration: none;
+  }
+
+  #contact-github img{
+    width: 5%;
+    align-content: center;
+    margin-top: 2%;
+    margin-bottom: -3%;
   }
   #contact-linkedin{
-    background-color: #80b541;
-    color: black;
-    height: 30px;
+    background-color: rgb(94, 91, 91);
+    color: white;
+    height: 100px;
     align-content: center;
-    padding: 2%;
+    padding: 0%;
     text-decoration: none;
   }
+  #contact-linkedin img{
+    width: 5%;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: -3%;
+  }
   #contact-phone{
-    background-color: #396602;
+    background-color: black;
     color: white;
     height: 60px;
     align-content: center;
     padding: 3%;
   }
   #contact-email{
-    background-color: #396602;
+    background-color: black;
     color: white;
     height: 60px;
     align-content: center;
@@ -281,24 +317,83 @@
     display: block; 
   }
 
-  #home{
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  #home {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        text-align: center; /* Center text */
     }
 
-    #skills{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    text-align: center;
-    padding: 2%;
-    
+    #home img {
+        width: 50%; /* Adjust image size for smaller screens */
+        margin-top: 5%; /* Increase space between image and text */
+    }
+
+    #home h1 {
+        width: 80%; /* Adjust text width for smaller screens */
+        font-size: 180%; /* Decrease font size for smaller screens */
+    }
+
+    #about {
+        text-align: center; /* Center align the content */
+    }
+
+    #user-detail-intro {
+        width: 90%; /* Adjust width for smaller screens */
+        font-size: 120%; /* Decrease font size for smaller screens */
+        margin: auto; /* Center the element */
+    }
+
+    #resume-button-1 {
+        font-size: 80%; /* Adjust button font size for smaller screens */
+        padding: 8px 16px; /* Increase button padding for easier tapping on mobile */
+    }
+
+    #skills {
+        grid-template-columns: repeat(2, 1fr); /* Adjust grid to two columns for smaller screens */
+        gap: 20px; /* Add gap between cards for better spacing */
+        padding: 5%; /* Increase padding for better spacing */
+    }
+
+    #skills img {
+        width: 70%; /* Adjust image width for smaller screens */
+        margin-top: 10%; /* Modify image top margin for better alignment */
+    }
+
+    #skills div {
+        width: 100%; /* Adjust text width for smaller screens */
+        margin-top: 5%; /* Modify text top margin for better spacing */
+        padding: 5%; /* Increase text padding for better spacing */
+    }
+
+    .project-card {
+    flex-direction: column; /* Change layout to a column for smaller screens */
+    width: 90%;
   }
 
-  .project-card{
-    display: flex;
-    flex-direction: column;
+  .project-card img {
+    width: 100%; /* Set image width to fill the container */
+    height: auto; /* Let the height adjust proportionally */
+    margin-bottom: 10px; /* Add spacing between image and text */
   }
+
+  .project-card div {
+    padding: 5px; /* Adjust text padding */
+  }
+
+  .project-title {
+    font-size: 150%; /* Reduce title font size */
+  }
+
+  .project-description {
+    font-size: 100%; /* Reduce description font size */
+  }
+
+  .project-github-link,
+  .project-deployed-link {
+    padding: 5px; /* Adjust button padding */
+    margin-top: 5px; /* Add spacing between buttons */
+  }
+
 
   #contact{
     display: grid;
@@ -315,7 +410,10 @@
         <a class="nav-link skills" href="#skill">Skills</a>
         <a class="nav-link projects" href="#projects">Projects</a>
         <a class="nav-link contact" href="#contact">Contact</a>
-        <a class="nav-link resume" href="https://test-resume.masaischool.com/resume?resumeId=6529170c41838a52ba65d18a&selectedTemplate=TwoColumnMinimal" id="resume-link-1" target="_blank">Resume</a>
+        <!-- <a class="nav-link resume" href="https://drive.google.com/file/d/1rANIofaSXH1TIVpTiKg3-v9odeTb-y9o/view?usp=sharing" download="AnshulResume" id="resume-link-1" target="_blank">Resume</a> -->
+
+
+        <a class="nav-link resume" href="https://drive.google.com/file/d/1CIfeX3-JHk_vJ20CVpyhTUJB1S96xNg7/view?usp=sharing" target="_blank" rel="noreferrer">Resume</a>
      
 
         <div class="hamburger-menu">
@@ -329,8 +427,10 @@
       <!-- Home Section -->
       <section id="home">
         
-        <img src="masa8 (1).jpg" alt="Your Professional Photo" class="home-img"> 
-          <h1>Hi There!, <br> I am Anshul Dhakate <br> Full Stack Web Developer <br> </h1>    
+        <img src="Anshul_pic.jpg" alt="Your Professional Photo" class="home-img"> 
+          <h1 >Hi There!, <br> I am Anshul Dhakate <br> Full Stack Web Developer <br> </h1>   
+          
+
       </section>
     
       <!-- About Section -->
@@ -341,7 +441,9 @@
           I developed passion for coding a few years back when I printed my first "Hello world" 😃, that hello world just hits different. Since then aesthetically functional websites has just been my thing.
           <br>
 
-          <a id="resume-button-1" href="https://drive.google.com/file/d/1Y3TWuhvKmR_qWVi4NTrRUW6137susQWm/view?usp=sharing" download="AnshulResume.pdf">Download Resume</a>
+          <!-- <a id="resume-button-1" href="https://drive.google.com/file/d/1CIfeX3-JHk_vJ20CVpyhTUJB1S96xNg7/view?usp=sharing" download="AnshulResume.pdf">Download Resume</a> -->
+
+          <button id="resume-button-1">Download Resume</button>
         </div>
         
       </div>
@@ -476,10 +578,12 @@
           <img src="https://github-readme-streak-stats.herokuapp.com?user=Anshuldhakate" alt="GitHub Streak" />
         </a>
       </div>
+
+      
       
       <div id="github-top-langs">
         <!-- Updated with an img tag having a src attribute -->
-        <img src="your_source_here" alt="" />
+        <img src="https://github-readme-stats.vercel.app/api?username=Anshuldhakate&amp;show_icons=true&amp;locale=en" alt="mohitkss">
       </div>
       
       <div id="github-stats-card">
@@ -488,9 +592,20 @@
       </div>
     
       <!-- Contact Section -->
+      <h1 id="skill">Contact Me</h1>
       <section id="contact">
-        <a href="https://github.com/Anshuldhakate" id="contact-github">GitHub Profile</a>
-        <a href="https://www.linkedin.com/in/anshul-dhakate-10b005145/" id="contact-linkedin">LinkedIn Profile</a>
+        <!-- <a href="https://github.com/Anshuldhakate" id="contact-github">GitHub Profile</a> -->
+
+        <a href="https://github.com/Anshuldhakate" target="_blank" id="contact-github">
+          <img src="https://github.com/fluidicon.png" alt="GitHub Logo">  <h4>GitHub Profile</h4>
+      </a>
+
+        <!-- <a href="https://www.linkedin.com/in/anshul-dhakate-10b005145/" id="contact-linkedin">LinkedIn Profile</a> -->
+
+        <a href="https://www.linkedin.com/in/anshul-dhakate-10b005145/" target="_blank" id="contact-linkedin">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/768px-LinkedIn_logo_initials.png" alt="LinkedIn Logo"> <h4>LinkedIn Profile</h4>
+      </a>
+
         <div id="contact-phone">Phone Number <br>📞9156632395</div>
         <div id="contact-email">Email Address <br>📧anshuldhakate11@gmail.com</div>
       </section>
@@ -507,6 +622,15 @@ hamburger.addEventListener('click', () => {
   // Toggle a class on the nav menu to show/hide links
   document.getElementById('nav-menu').classList.toggle('show-links');
 });
+
+document.getElementById('resume-button-1').addEventListener('click', function() {
+            var link = document.createElement('a');
+            link.href = 'AnshulResume.pdf'; // Replace with the actual path to your PDF file
+            link.download = 'AnshulResume'; // Specify the desired file name
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
 
 </script>
 
