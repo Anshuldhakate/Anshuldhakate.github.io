@@ -17,40 +17,44 @@
     background-image: url(https://mohitkss.github.io/static/media/backgroundHome.1401f9c3ab9e0acab13c.jpg);
 }
 
-  #nav-menu{
-    /* background-color: #80b541; */
-    background-color: black;
-    align-items: center;
-    width: 100%;
-    margin: auto;
-    padding: 10px;
-    color: white;
-    text-decoration: none;
-    font-size: 110%;
-    padding: 1%;
-    position: fixed;
-    transition: transform 0.9s ease;
-  }
+#nav-menu {
+  background-color: black;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 110%;
+  padding: 1%;
+  position: fixed;
+  top: 0%; /* Initial position above the viewport */
+  transition: top 0.9s ease;
+}
 
-  #nav-menu a{
-    text-decoration: none;
-    margin-left: 18px;
-    color: white;
-    text-decoration: solid;
-    padding: 0.5%;
-  }
+#nav-menu.show-links {
+  top: 0; /* Show the links by bringing the menu down */
+}
 
-  #nav-menu a:hover{
-    background-color: #3f7502;
-    color: white;
-  }
+#nav-menu a {
+  text-decoration: none;
+  margin-left: 18px;
+  color: white;
+  text-decoration: solid;
+  padding: 0.5%;
+}
 
-  .nav-link-name{
-   margin-right: 30%;
-  }
+#nav-menu a:hover {
+  background-color: #3f7502;
+  color: white;
+}
 
-  .hamburger-menu {
-  display: none; /* Hide by default */
+.nav-link-name {
+  margin-right: 30%;
+}
+
+.hamburger-menu {
+  display: none;
   cursor: pointer;
 }
 
@@ -404,6 +408,14 @@
 </style>
 <body>
     <nav id="nav-menu">
+
+      <div class="hamburger-menu">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+
+
       <!-- <a class="nav-link-name" href="#home">Anshul</a> -->
         <a class="nav-link home" href="#home">Home</a>
         <a class="nav-link about" href="#about">About</a>
@@ -412,15 +424,10 @@
         <a class="nav-link contact" href="#contact">Contact</a>
         <!-- <a class="nav-link resume" href="https://drive.google.com/file/d/1rANIofaSXH1TIVpTiKg3-v9odeTb-y9o/view?usp=sharing" download="AnshulResume" id="resume-link-1" target="_blank">Resume</a> -->
 
-
-        <a class="nav-link resume" href="https://drive.google.com/file/d/1CIfeX3-JHk_vJ20CVpyhTUJB1S96xNg7/view?usp=sharing" target="_blank" rel="noreferrer">Resume</a>
+        <a class="nav-link resume" href="https://drive.google.com/file/d/1b0EaV07fY7lpDBQhD9k4JOHsiF04HKC2/view?usp=sharing" target="_blank" rel="noreferrer">Resume</a>
      
 
-        <div class="hamburger-menu">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-        </div>
+        
       </nav>
       
     
@@ -616,22 +623,23 @@
 <script>
 
 const hamburger = document.querySelector('.hamburger-menu');
-const navLinks = document.querySelectorAll('.nav-link');
+const navMenu = document.getElementById('nav-menu');
 
 hamburger.addEventListener('click', () => {
-  // Toggle a class on the nav menu to show/hide links
-  document.getElementById('nav-menu').classList.toggle('show-links');
+  // Toggle the class on the nav menu to show/hide links
+  navMenu.classList.toggle('show-links');
 });
 
 document.getElementById('resume-button-1').addEventListener('click', function() {
-            var link = document.createElement('a');
-            link.href = 'AnshulResume.pdf'; // Replace with the actual path to your PDF file
-            link.download = 'AnshulResume'; // Specify the desired file name
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        });
-
+    var link = document.createElement('a');
+    link.href = 'https://drive.google.com/file/d/1b0EaV07fY7lpDBQhD9k4JOHsiF04HKC2/view?usp=sharing'; // Replace with your Google Drive link
+    link.target = '_blank'; // Open the link in a new tab
+    link.rel = 'noreferrer'; // Set the rel attribute for security
+    link.download = 'AnshulResume'; // Specify the desired file name
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+});
 </script>
 
 </html> 
