@@ -631,15 +631,21 @@ hamburger.addEventListener('click', () => {
 });
 
 document.getElementById('resume-button-1').addEventListener('click', function() {
+    // Replace 'YOUR_GOOGLE_DRIVE_PDF_LINK' with the direct link to your PDF file on Google Drive
+    const driveLink = 'https://drive.google.com/uc?export=download&id=1b0EaV07fY7lpDBQhD9k4JOHsiF04HKC2';
+    // https://drive.google.com/file/d/1b0EaV07fY7lpDBQhD9k4JOHsiF04HKC2/view?usp=sharing
+
+    // Create a download link
     var link = document.createElement('a');
-    link.href = 'https://drive.google.com/file/d/1b0EaV07fY7lpDBQhD9k4JOHsiF04HKC2/view?usp=sharing'; // Replace with your Google Drive link
+    link.href = driveLink;
     link.target = '_blank'; // Open the link in a new tab
     link.rel = 'noreferrer'; // Set the rel attribute for security
-    link.download = 'AnshulResume'; // Specify the desired file name
+    link.download = 'AnshulResume.pdf'; // Specify the desired file name
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
 });
+
 </script>
 
 </html> 
